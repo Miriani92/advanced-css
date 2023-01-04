@@ -14,22 +14,26 @@ body {
   background-color: black;
 }
 
+.wrapper {
+  transform-style: preserve-3d;
+}
+
 .cube {
   position: relative;
   width: 300px;
   height: 200px;
   inset: 0;
   transform-style: preserve-3d;
-  background-color: gray;
+  background-color: red;
   animation: animate 5s linear infinite;
 }
 
 @keyframes animate {
   0% {
-    transform: rotateX(240deg) rotateZ(400deg);
+    transform: rotateX(250deg) rotateZ(400deg);
   }
   100% {
-    transform: rotateX(240deg) rotateZ(40deg);
+    transform: rotateX(250deg) rotateZ(40deg);
   }
 }
 
@@ -38,7 +42,7 @@ div.cube > div:nth-child(1) {
   inset: 0;
   width: 100%;
   height: 100%;
-  background-color: gray;
+  background-color: red;
   transform: translateZ(100px);
 }
 
@@ -47,7 +51,7 @@ div.cube > div:nth-child(2) {
   inset: 0;
   width: 300px;
   height: 100px;
-  background-color: gray;
+  background-color: red;
   transform-origin: top;
   transform: rotateX(90deg);
 }
@@ -58,7 +62,7 @@ div.cube > div:nth-child(3) {
   width: 100px;
   height: 200px;
   transform-origin: right;
-  background-color: grey;
+  background-color: red;
   transform: rotateY(90deg) translateZ(-100px);
 }
 div.cube > div:nth-child(4) {
@@ -67,7 +71,7 @@ div.cube > div:nth-child(4) {
   width: 300px;
   height: 100px;
   transform-origin: right;
-  background-color: grey;
+  background-color: red;
   transform: rotateX(90deg) translateY(50px) translateZ(-150px);
 }
 div.cube > div:nth-child(5) {
@@ -76,15 +80,50 @@ div.cube > div:nth-child(5) {
   width: 200px;
   height: 100px;
   transform-origin: top;
-  background-color: grey;
-  transform: rotateX(90deg) rotateY(90deg) translateX(100px) translateZ(200px);
-}
-
-div.cube:hover > div {
   background-color: red;
-  filter: drop-shadow(0 0 50px red);
+  transform: rotateX(90deg) rotateY(90deg) translateX(100px) translateZ(200px);
 }
 
 div.cube:hover {
   background-color: red;
+}
+
+div.text {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+div.text div {
+  font-size: 5em;
+  color: white;
+}
+
+div.text div:nth-child(1) {
+  position: absolute;
+  inset: 0;
+  transform-origin: top;
+  transform: rotateX(90deg) translateY(20px) translateX(50px) translateZ(50px);
+}
+div.text div:nth-child(2) {
+  position: absolute;
+  inset: 0;
+  transform-origin: right;
+  transform: rotateX(90deg) rotateY(90deg) translateX(225px) translateY(20px)
+    translateY(100px) translateZ(50px);
+}
+div.text div:nth-child(3) {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: rotateX(90deg) rotateY(270deg) translateX(-80px) translateY(20px)
+    translateY(100px) translateZ(50px);
+}
+div.text div:nth-child(4) {
+  position: absolute;
+  inset: 0;
+  transform-origin: left;
+  transform: rotateX(90deg) rotateY(180deg) translateX(-225px) translateY(20px)
+    translateY(100px) translateZ(150px);
 }

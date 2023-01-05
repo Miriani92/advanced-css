@@ -16,8 +16,44 @@ body {
 }
 
 .cup {
-  background-color: white;
+  background: linear-gradient(to right, white, rgb(207, 199, 199));
   width: 300px;
   height: 300px;
   border-radius: 0 0 45% 45%;
+  position: relative;
+  top: 50px;
+  z-index: 200;
+}
+
+.top {
+  position: absolute;
+  top: -25px;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(to right, white, rgb(207, 199, 199));
+  border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  width: calc(100% - 20px);
+
+  top: 10px;
+  left: 10px;
+  height: 50px;
+  background-color: rgb(123, 78, 78);
+  border-radius: 50%;
+}
+.handle {
+  position: absolute;
+  width: 200px;
+  top: 30px;
+  right: -90px;
+  height: 200px;
+  border: 25px solid rgb(207, 199, 199);
+  z-index: 1;
+  border-radius: 50%;
+  border-left: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  transform: rotateZ(50deg);
 }

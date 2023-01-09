@@ -83,3 +83,38 @@ body {
   transform: rotateX(250deg);
   z-index: 11;
 }
+.vapor {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 2px;
+}
+.vapor > div {
+  position: relative;
+  top: -20px;
+  width: 10px;
+  height: 100px;
+  background-color: rgb(207, 199, 199);
+  border-radius: 50%;
+  filter: blur(8px);
+  animation: animate 5s linear infinite;
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(0px) scaleX(1);
+  }
+  15% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-200px) scaleX(5);
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-400px) scaleX(10);
+  }
+}
